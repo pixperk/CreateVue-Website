@@ -163,6 +163,7 @@ html, body {
         padding: 8vw 0;
         min-height:100vh;
         width: 100%;
+        position: relative;
     }
     .moving-text{
         overflow-x: auto;
@@ -199,4 +200,62 @@ html, body {
         to{
             transform: translateX(-100%);
         }
+    }
+    .page2-bottom{
+        height: 80vh;
+        width: 100%;
+        display:flex;
+        padding:4.5vw;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .page2-bottom h1{
+        font-size: 4vw;
+        width: 60%;
+        line-height: 4vw;
+        position: relative;
+        z-index: 9;
+    }
+    .bottom-part2{
+        width:20%;
+    }
+    .bottom-part2 img{
+        width:100%;
+        border-radius: 15px;
+    }
+    .bottom-part2 p{
+        font-weight: 450;
+        margin-top: 2vw;
+        font-size: 1vw;
+    }
+    .page2 .mover{
+        height:32vw;
+        width:32vw;
+        position: absolute;
+        border-radius: 50%;
+        background:linear-gradient(to top,#2b90fd,#84bbf5);
+        top: 58%;
+        left: 25%;
+        animation-name: mover;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+        animation-timing-function: ease-in-out;
+
+    }
+
+    @keyframes mover {
+        from{
+            filter: blur(20px);
+            transform: translate(10%,-10%) skew(0);
+        }
+        to{
+            filter: blur(30px);
+            transform: translate(-10%,10%) skew(-12deg);
+        }
+    }
+    .page3{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(255, 235, 222);
     }
